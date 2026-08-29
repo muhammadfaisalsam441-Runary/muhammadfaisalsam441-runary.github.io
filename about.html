@@ -1,14 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tentang saya</title>
+    <title>Tentang Saya | Muhammad Faisal</title>
+    
+    <!-- Menghubungkan ke file CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font dari Google (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="index.html">home</a>
-    <a href="about.html">tentang saya</a>
-    <a href="contact.html">contact me</a>
-    <h1>ini adalah website sederhana</h1>
+
+    <!-- Bagian Navigasi (Menu) -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Faisal<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian Konten Utama (About Section) -->
+    <main class="about-container">
+        
+        <!-- Penjelasan Singkat -->
+        <section class="about-text">
+            <h2>Tentang Saya</h2>
+            <div class="about-description">
+                <p>Halo! Saya <strong>Muhammad Faisal</strong>, seorang mahasiswa semester 3 program studi Teknik Komputer di <strong>Universitas Makassar</strong>.</p>
+                <p>Saya sangat antusias dalam mempelajari bagaimana perangkat lunak dan infrastruktur teknologi saling terhubung. Oleh karena itu, saya mendedikasikan waktu saya untuk mendalami dunia <em>Web Development</em> dan mengelola infrastruktur <em>Jaringan Komputer</em>.</p>
+            </div>
+        </section>
+
+        <!-- Bagian Keahlian (Skills) -->
+        <section class="skills-section">
+            <h3>Keahlian & Teknologi</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Web Development</h4>
+                    <p>HTML & CSS</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Jaringan Komputer</h4>
+                    <p>Dasar Jaringan & Topologi</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Mikrotik</h4>
+                    <p>Konfigurasi & Manajemen</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Bahasa Pemrograman</h4>
+                    <p>C++</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
 </body>
 </html>

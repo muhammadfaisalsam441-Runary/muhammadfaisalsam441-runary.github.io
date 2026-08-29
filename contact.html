@@ -1,16 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <title>Kontak | Muhammad Faisal</title>
+    
+    <!-- Menghubungkan ke file CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Font dari Google (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="index.html">home</a>
-    <a href="about.html">tentang saya</a>
-    <a href="contact.html">contact me</a>
-    <h1>contact me : faisal </h1>
-    <p>email: faisal@example.com</p>
-    <p>phone: 085824491160</p>
+
+    <!-- Bagian Navigasi (Menu) -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Faisal<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian Konten Utama (Contact Section) -->
+    <main class="contact-container">
+        
+        <div class="contact-header">
+            <h2>Hubungi Saya</h2>
+            <p>Mari berdiskusi tentang Web Development, Jaringan, atau peluang kolaborasi lainnya.</p>
+        </div>
+
+        <div class="contact-content">
+            
+            <!-- Kartu Informasi Kontak -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <h4>WhatsApp</h4>
+                    <!-- Link langsung ke WhatsApp -->
+                    <a href="https://wa.me/6285824491160" target="_blank">0858-2449-1160</a>
+                </div>
+                <div class="info-card">
+                    <h4>Email</h4>
+                    <!-- Link langsung membuka aplikasi email -->
+                    <a href="mailto:muhammadfaisalsam441@gmail.com">muhammadfaisalsam441@gmail.com</a>
+                </div>
+                <div class="info-card">
+                    <h4>GitHub</h4>
+                    <a href="https://github.com/muhammadfaisalsam441-Runary" target="_blank">muhammadfaisalsam441-Runary</a>
+                </div>
+                <div class="info-card">
+                    <h4>Instagram</h4>
+                    <a href="https://www.instagram.com/mhmmdfaisalsam?igsi=NGxoajVleGdlbHFp" target="_blank">@mhmmdfaisalsam</a>
+                </div>
+            </div>
+
+            <!-- Formulir Kontak Sederhana -->
+            <div class="contact-form">
+                <h3>Kirim Pesan</h3>
+                <form action="#">
+                    <div class="input-group">
+                        <input type="text" placeholder="Nama Anda" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Email Anda" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
 </body>
 </html>
