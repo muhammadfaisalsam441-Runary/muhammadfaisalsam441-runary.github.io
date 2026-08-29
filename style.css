@@ -297,16 +297,19 @@ body {
 }
 
 /* =========================================
-   RESPONSIVE (Untuk HP / Layar Kecil)
+Untuk HP / Layar Kecil
 ========================================= */
 @media (max-width: 768px) {
-    .hero, .contact-content {
-        flex-direction: column;
+    /* Menggunakan column-reverse agar foto (elemen bawah di HTML) naik ke atas */
+    .hero {
+        flex-direction: column-reverse;
         text-align: center;
+        gap: 2rem; /* Jarak antara foto dan teks */
     }
 
-    .hero-content {
-        margin-bottom: 2rem;
+    .contact-content {
+        flex-direction: column;
+        text-align: center;
     }
 
     .cta-buttons {
