@@ -259,6 +259,7 @@ body {
     color: var(--primary-color);
     font-weight: 600;
     font-size: 1.1rem;
+    word-break: break-all;
 }
 
 .contact-form {
