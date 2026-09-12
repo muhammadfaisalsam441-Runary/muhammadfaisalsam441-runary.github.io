@@ -17,11 +17,21 @@
     <header>
         <nav class="navbar">
             <div class="logo">Muhammad Faisal Sam<span></span></div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact Me</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
             </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Ganti tema terang/gelap">
+                    <span id="theme-icon">&#127769;</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -60,17 +70,21 @@
             <!-- Formulir Kontak Sederhana -->
             <div class="contact-form">
                 <h3>Kirim Pesan</h3>
-                <form action="#">
+                <form id="contact-form" novalidate>
                     <div class="input-group">
-                        <input type="text" placeholder="Nama Anda" required>
+                        <input type="text" id="nama" name="nama" placeholder="Nama Anda">
+                        <span class="error-text" id="nama-error"></span>
                     </div>
                     <div class="input-group">
-                        <input type="email" placeholder="Email Anda" required>
+                        <input type="email" id="email" name="email" placeholder="Email Anda">
+                        <span class="error-text" id="email-error"></span>
                     </div>
                     <div class="input-group">
-                        <textarea rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                        <textarea rows="5" id="pesan" name="pesan" placeholder="Tulis pesan Anda di sini..."></textarea>
+                        <span class="error-text" id="pesan-error"></span>
                     </div>
                     <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                    <div id="form-message" class="form-message"></div>
                 </form>
             </div>
 
@@ -78,5 +92,12 @@
 
     </main>
 
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Muhammad Faisal Sam. All rights reserved.</p>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas">&#8679;</button>
+
+    <script src="script.js"></script>
 </body>
 </html>

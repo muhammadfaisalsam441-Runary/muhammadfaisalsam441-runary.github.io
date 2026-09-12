@@ -16,11 +16,21 @@
     <header>
         <nav class="navbar">
             <div class="logo">Muhammad Faisal Sam<span></span></div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
             </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Ganti tema terang/gelap">
+                    <span id="theme-icon">&#127769;</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -28,7 +38,7 @@
     <main class="about-container">
         
         <!-- Penjelasan Singkat -->
-        <section class="about-text">
+        <section class="about-text fade-in">
             <h2>Tentang Saya</h2>
             <div class="about-description">
                 <p>Halo! Saya <strong>Muhammad Faisal Sam</strong>, seorang mahasiswa semester 3 program studi Teknik Komputer di <strong>Universitas Negeri Makassar</strong>.</p>
@@ -37,7 +47,7 @@
         </section>
 
         <!-- Bagian Keahlian (Skills) -->
-        <section class="skills-section">
+        <section class="skills-section fade-in">
             <h3>Keahlian & Teknologi</h3>
             <div class="skills-grid">
                 <div class="skill-card">
@@ -60,7 +70,7 @@
         </section>
 
         <!-- Bagian Proyek (Projects) -->
-        <section class="projects-section">
+        <section class="projects-section fade-in">
             <h3>Proyek Saya</h3>
             <div class="projects-grid">
                 <div class="project-card">
@@ -72,5 +82,12 @@
 
     </main>
 
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Muhammad Faisal Sam. All rights reserved.</p>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas">&#8679;</button>
+
+    <script src="script.js"></script>
 </body>
 </html>

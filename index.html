@@ -17,11 +17,21 @@
     <header>
         <nav class="navbar">
             <div class="logo">Muhammad Faisal Sam<span></span></div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
             </ul>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Ganti tema terang/gelap">
+                    <span id="theme-icon">&#127769;</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
@@ -29,7 +39,7 @@
     <main class="hero">
         <div class="hero-content">
             <h3>Halo, perkenalkan saya</h3>
-            <h1>Muhammad Faisal Sam</h1>
+            <h1><span id="typed-text"></span><span class="typing-cursor">|</span></h1>
             <h2>Mahasiswa Universitas Negeri Makassar</h2>
             <p>
                 Saya memiliki ketertarikan dan fokus yang besar dalam bidang <strong>Web Development</strong> serta <strong>Jaringan Komputer</strong>.
@@ -46,5 +56,12 @@
         </div>
     </main>
 
+    <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Muhammad Faisal Sam. All rights reserved.</p>
+    </footer>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas">&#8679;</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
