@@ -46,37 +46,25 @@
             </div>
         </section>
 
+        <!-- Filter Pencarian Skill & Proyek -->
+        <div class="search-box fade-in">
+            <input type="text" id="cari-portofolio" placeholder="Cari skill atau proyek... (mis. 'javascript', 'mikrotik')">
+            <p id="no-result" class="loading-text" style="display: none;">Tidak ada skill atau proyek yang cocok dengan pencarian.</p>
+        </div>
+
         <!-- Bagian Keahlian (Skills) -->
         <section class="skills-section fade-in">
             <h3>Keahlian & Teknologi</h3>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h4>Web Development</h4>
-                    <p>HTML & CSS</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Jaringan Komputer</h4>
-                    <p>Dasar Jaringan & Topologi</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Mikrotik</h4>
-                    <p>Konfigurasi & Manajemen</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Bahasa Pemrograman</h4>
-                    <p>C++</p>
-                </div>
+            <div class="skills-grid" id="skills-grid">
+                <p class="loading-text">Memuat data keahlian...</p>
             </div>
         </section>
 
         <!-- Bagian Proyek (Projects) -->
         <section class="projects-section fade-in">
             <h3>Proyek Saya</h3>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h4>Hotel Reservation System</h4>
-                    <p>Sebuah sistem reservasi hotel yang dirancang untuk memudahkan pemesanan kamar, manajemen pelanggan, dan pelacakan ketersediaan kamar secara efisien.</p>
-                </div>
+            <div class="projects-grid" id="projects-grid">
+                <p class="loading-text">Memuat data proyek...</p>
             </div>
         </section>
 
@@ -88,6 +76,8 @@
 
     <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas">&#8679;</button>
 
+    <!-- jQuery 3.7.1 (CDN, versi terkunci + SRI) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
