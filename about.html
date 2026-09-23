@@ -1,83 +1,353 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Saya | Muhammad Faisal Sam</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Muhammad Faisal Sam</title>
+  <meta name="description" content="Profil Muhammad Faisal Sam: mahasiswa semester 3 Teknik Komputer, Fakultas Teknik, Universitas Negeri Makassar. Fokus pada web development dan jaringan komputer.">
+  <meta name="author" content="Muhammad Faisal Sam">
+  <meta name="theme-color" content="#070b14">
+  <meta property="og:title" content="About — Muhammad Faisal Sam">
+  <meta property="og:description" content="Mahasiswa Teknik Komputer UNM · Web Development &amp; Jaringan Komputer">
+  <meta property="og:image" content="assets/img/faisal.webp">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 
-    <link rel="stylesheet" href="style.css">
+  <!-- Font & ikon disimpan lokal agar tetap tampil tanpa internet -->
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script>
+    document.documentElement.className += " js";
+    try {
+      if (localStorage.getItem("theme") === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    } catch (e) {}
+  </script>
 </head>
-<body>
+<body data-page="about">
+  <a href="#main" class="skip-link">Lewati ke konten</a>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- Bagian Navigasi (Menu) -->
-    <header>
-        <nav class="navbar">
-            <div class="logo">Muhammad Faisal Sam<span></span></div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-            <div class="nav-controls">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Ganti tema terang/gelap">
-                    <span id="theme-icon">&#127769;</span>
-                </button>
-                <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="container nav-inner" aria-label="Navigasi utama">
+      <a href="index.html" class="logo" aria-label="Faisal — ke beranda">
+        <span class="bracket">&lt;</span>Faisal<span class="slash">/</span><span class="bracket">&gt;</span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active" aria-current="page">About</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="mobile-cta">
+          <a href="https://github.com/muhammadfaisalsam441-Runary" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="width:100%">
+            <i class="fa-brands fa-github"></i> Lihat GitHub
+          </a>
+        </li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema terang/gelap" title="Ganti tema">
+          <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+        </button>
+        <a href="https://github.com/muhammadfaisalsam441-Runary" target="_blank" rel="noopener" class="btn btn-outline btn-sm nav-cta">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ PAGE HEADER ============ -->
+    <section class="page-header">
+      <div class="bg-grid"></div>
+      <div class="glow glow-1"></div>
+      <div class="container">
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>/</span><span class="current">About</span>
         </nav>
-    </header>
+        <h1 class="page-title reveal">Tentang <span class="text-gradient">Saya</span></h1>
+        <p class="page-desc reveal">
+          Mahasiswa Teknik Komputer yang belajar dengan cara membangun — dari website yang dipakai
+          orang sampai jaringan yang menghubungkannya.
+        </p>
+      </div>
+    </section>
 
-    <!-- Bagian Konten Utama (About Section) -->
-    <main class="about-container">
-        
-        <!-- Penjelasan Singkat -->
-        <section class="about-text fade-in">
-            <h2>Tentang Saya</h2>
-            <div class="about-description">
-                <p>Halo! Saya <strong>Muhammad Faisal Sam</strong>, seorang mahasiswa semester 3 program studi Teknik Komputer di <strong>Universitas Negeri Makassar</strong>.</p>
-                <p>Saya sangat antusias dalam mempelajari bagaimana perangkat lunak dan infrastruktur teknologi saling terhubung. Oleh karena itu, saya mendedikasikan waktu saya untuk mendalami dunia <em>Web Development</em> dan mengelola infrastruktur <em>Jaringan Komputer</em>.</p>
-            </div>
-        </section>
-
-        <!-- Filter Pencarian Skill & Proyek -->
-        <div class="search-box fade-in">
-            <input type="text" id="cari-portofolio" placeholder="Cari skill atau proyek... (mis. 'javascript', 'mikrotik')">
-            <p id="no-result" class="loading-text" style="display: none;">Tidak ada skill atau proyek yang cocok dengan pencarian.</p>
+    <!-- ============ PROFIL ============ -->
+    <section class="section" id="profil">
+      <div class="container about-grid">
+        <div class="about-photo reveal reveal-left">
+          <div class="photo-frame">
+            <img src="assets/img/faisal.webp" alt="Foto Muhammad Faisal Sam" width="640" height="640">
+          </div>
+          <div class="photo-badge">
+            <strong class="text-gradient">3</strong>
+            <small>Semester</small>
+          </div>
         </div>
 
-        <!-- Bagian Keahlian (Skills) -->
-        <section class="skills-section fade-in">
-            <h3>Keahlian & Teknologi</h3>
-            <div class="skills-grid" id="skills-grid">
-                <p class="loading-text">Memuat data keahlian...</p>
+        <div class="about-text reveal reveal-right">
+          <span class="eyebrow">Profil</span>
+          <h2>Muhammad Faisal Sam</h2>
+          <p class="lead">
+            Mahasiswa semester 3 Program Studi Teknik Komputer, Jurusan Teknik Informatika dan
+            Komputer, Fakultas Teknik, Universitas Negeri Makassar.
+          </p>
+          <p>
+            Minat saya ada di dua bidang: <strong>web development</strong> dan
+            <strong>jaringan komputer</strong>. Di sisi web, saya membangun website yang responsif
+            dan interaktif menggunakan HTML, CSS, JavaScript, dan jQuery. Di sisi jaringan, saya
+            mempelajari konfigurasi router MikroTik dan bagaimana sebuah jaringan dirancang agar
+            stabil dan mudah dikelola.
+          </p>
+          <p>
+            Saya percaya cara belajar terbaik adalah dengan membuat sesuatu yang nyata. Karena itu,
+            saya berusaha menjadikan tugas kuliah sebagai project yang benar-benar bisa dipakai —
+            seperti website usaha depot air <strong>AA WATER</strong> dan website profil
+            <strong>SMK Negeri 10 Makassar</strong>.
+          </p>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <span class="icon-box"><i class="fa-solid fa-user"></i></span>
+              <div><small>Nama Lengkap</small><span>Muhammad Faisal Sam</span></div>
             </div>
-        </section>
-
-        <!-- Bagian Proyek (Projects) -->
-        <section class="projects-section fade-in">
-            <h3>Proyek Saya</h3>
-            <div class="projects-grid" id="projects-grid">
-                <p class="loading-text">Memuat data proyek...</p>
+            <div class="info-item">
+              <span class="icon-box"><i class="fa-solid fa-building-columns"></i></span>
+              <div><small>Universitas</small><span>Universitas Negeri Makassar</span></div>
             </div>
-        </section>
+            <div class="info-item">
+              <span class="icon-box"><i class="fa-solid fa-microchip"></i></span>
+              <div><small>Fakultas</small><span>Fakultas Teknik</span></div>
+            </div>
+            <div class="info-item">
+              <span class="icon-box"><i class="fa-solid fa-layer-group"></i></span>
+              <div><small>Jurusan</small><span>Teknik Informatika dan Komputer</span></div>
+            </div>
+            <div class="info-item">
+              <span class="icon-box"><i class="fa-solid fa-graduation-cap"></i></span>
+              <div><small>Program Studi</small><span>Teknik Komputer</span></div>
+            </div>
+            <div class="info-item">
+              <span class="icon-box"><i class="fa-solid fa-book-open"></i></span>
+              <div><small>Status</small><span>Mahasiswa Aktif · Semester 3</span></div>
+            </div>
+          </div>
 
-    </main>
+          <div class="about-actions">
+            <a href="contact.html" class="btn btn-primary">Hubungi Saya <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="index.html#project" class="btn btn-outline"><i class="fa-solid fa-layer-group"></i> Lihat Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <footer class="site-footer">
-        <p>&copy; <span id="year"></span> Muhammad Faisal Sam. All rights reserved.</p>
-    </footer>
+    <!-- ============ PERJALANAN ============ -->
+    <section class="section section-alt" id="perjalanan">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Perjalanan</span>
+          <h2 class="section-title">Pendidikan &amp; perjalanan belajar</h2>
+          <p class="section-desc">Langkah-langkah yang membentuk minat saya di bidang web dan jaringan.</p>
+        </div>
 
-    <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas">&#8679;</button>
+        <div class="timeline">
+          <div class="card tl-item reveal">
+            <div class="tl-date">2025 — Sekarang</div>
+            <h3>S1 Teknik Komputer</h3>
+            <div class="tl-place">Universitas Negeri Makassar · Fakultas Teknik</div>
+            <p>
+              Jurusan Teknik Informatika dan Komputer. Saat ini menempuh semester 3 dengan fokus
+              pada web development dan jaringan komputer.
+            </p>
+          </div>
+          <div class="card tl-item reveal">
+            <div class="tl-date">2026</div>
+            <h3>Membangun &amp; mempublikasikan project web</h3>
+            <div class="tl-place">GitHub · GitHub Pages</div>
+            <p>
+              Membangun website AA WATER dan website SMK Negeri 10 Makassar, lalu
+              mempublikasikannya secara online melalui GitHub Pages.
+            </p>
+          </div>
+          <div class="card tl-item reveal">
+            <div class="tl-date">Saat ini</div>
+            <h3>Mendalami web development &amp; jaringan</h3>
+            <div class="tl-place">Perkuliahan &amp; belajar mandiri</div>
+            <p>
+              Terus mengasah JavaScript dan jQuery untuk membuat web yang interaktif, serta
+              konfigurasi MikroTik untuk membangun jaringan komputer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- jQuery 3.7.1 (CDN, versi terkunci + SRI) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <!-- ============ SKILL ============ -->
+    <section class="section" id="skill">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Skill</span>
+          <h2 class="section-title">Keahlian teknis</h2>
+          <p class="section-desc">Teknologi yang saya pelajari dan gunakan, baik di perkuliahan maupun di project.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="card skill-card reveal">
+            <div class="skill-head">
+              <span class="skill-icon"><span class="cpp">C++</span></span>
+              <span class="tag">Pemrograman</span>
+            </div>
+            <h3>C++</h3>
+            <p>Logika pemrograman, struktur data, dan algoritma sebagai fondasi dalam memecahkan masalah.</p>
+          </article>
+
+          <article class="card skill-card reveal">
+            <div class="skill-head">
+              <span class="skill-icon"><i class="fa-brands fa-html5 c-html"></i></span>
+              <span class="tag">Web</span>
+            </div>
+            <h3>HTML</h3>
+            <p>Menyusun struktur halaman yang semantik, rapi, dan mudah diakses oleh pengguna maupun mesin pencari.</p>
+          </article>
+
+          <article class="card skill-card reveal">
+            <div class="skill-head">
+              <span class="skill-icon"><i class="fa-brands fa-css3-alt c-css"></i></span>
+              <span class="tag">Web</span>
+            </div>
+            <h3>CSS</h3>
+            <p>Membuat tampilan yang menarik dan responsif dengan Flexbox, Grid, variabel CSS, dan animasi.</p>
+          </article>
+
+          <article class="card skill-card reveal">
+            <div class="skill-head">
+              <span class="skill-icon"><i class="fa-brands fa-js c-js"></i></span>
+              <span class="tag">Web</span>
+            </div>
+            <h3>JavaScript</h3>
+            <p>Menambahkan interaktivitas, validasi form, dan manipulasi DOM — termasuk menggunakan jQuery dan AJAX.</p>
+          </article>
+
+          <article class="card skill-card reveal">
+            <div class="skill-head">
+              <span class="skill-icon"><i class="fa-solid fa-network-wired c-mikrotik"></i></span>
+              <span class="tag">Jaringan</span>
+            </div>
+            <h3>MikroTik</h3>
+            <p>Konfigurasi router MikroTik untuk kebutuhan jaringan, seperti pengalamatan IP dan pengaturan koneksi.</p>
+          </article>
+
+          <article class="card skill-card highlight reveal">
+            <h3><i class="fa-solid fa-bolt" style="color:var(--primary);margin-right:8px"></i>Juga dipakai di project</h3>
+            <div class="tags">
+              <span class="tag">jQuery</span>
+              <span class="tag">Bootstrap 5</span>
+              <span class="tag">AJAX &amp; JSON</span>
+              <span class="tag">Git &amp; GitHub</span>
+              <span class="tag">GitHub Pages</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CARA KERJA ============ -->
+    <section class="section section-alt" id="cara-kerja">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Prinsip</span>
+          <h2 class="section-title">Cara saya bekerja</h2>
+          <p class="section-desc">Tiga hal yang selalu saya pegang setiap kali mengerjakan project.</p>
+        </div>
+
+        <div class="values-grid">
+          <article class="card value-card reveal">
+            <span class="icon-box"><i class="fa-solid fa-mobile-screen"></i></span>
+            <h3>Responsif &amp; mudah digunakan</h3>
+            <p>Website harus nyaman dipakai di HP maupun desktop, dengan alur yang jelas bagi pengguna.</p>
+          </article>
+          <article class="card value-card reveal">
+            <span class="icon-box"><i class="fa-solid fa-code"></i></span>
+            <h3>Kode rapi &amp; terstruktur</h3>
+            <p>Kode yang terorganisir dan diberi komentar agar mudah dipahami, dirawat, dan dikembangkan.</p>
+          </article>
+          <article class="card value-card reveal">
+            <span class="icon-box"><i class="fa-solid fa-seedling"></i></span>
+            <h3>Terus belajar</h3>
+            <p>Teknologi terus berkembang. Saya selalu mencoba hal baru dan belajar dari setiap project.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-box reveal">
+          <div>
+            <h2>Mari terhubung dan berdiskusi</h2>
+            <p>Punya pertanyaan, ide project, atau ingin berkolaborasi? Saya senang mendengarnya.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-primary">Hubungi Saya <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="https://github.com/muhammadfaisalsam441-Runary" target="_blank" rel="noopener" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo"><span class="bracket">&lt;</span>Faisal<span class="slash">/</span><span class="bracket">&gt;</span></a>
+          <p>Mahasiswa Teknik Komputer di Universitas Negeri Makassar yang fokus pada web development dan jaringan komputer.</p>
+          <div class="socials">
+            <a href="https://github.com/muhammadfaisalsam441-Runary" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/mhmmdfaisalsam" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://wa.me/6285824491160" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:muhammadfaisalsam441@gmail.com" class="social-link" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+            <li><a href="index.html#project"><i class="fa-solid fa-layer-group"></i> Project</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Kontak</h4>
+          <ul class="footer-links">
+            <li><a href="https://wa.me/6285824491160" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> 0858-2449-1160</a></li>
+            <li><a href="mailto:muhammadfaisalsam441@gmail.com"><i class="fa-regular fa-envelope"></i> Email</a></li>
+            <li><a href="https://www.instagram.com/mhmmdfaisalsam" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> @mhmmdfaisalsam</a></li>
+            <li><a href="https://github.com/muhammadfaisalsam441-Runary" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span class="year">2026</span> Muhammad Faisal Sam. Hak cipta dilindungi.</span>
+        <span class="made">Dibuat dengan HTML, CSS, JavaScript &amp; jQuery</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"><i class="fa-solid fa-circle-check"></i><span></span></div>
+
+  <script src="js/vendor/jquery-3.7.1.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
