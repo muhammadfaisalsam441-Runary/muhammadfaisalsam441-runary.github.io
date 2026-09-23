@@ -1427,7 +1427,7 @@ h4 {
   line-height: 1.4;
 }
 
-.info-item span {
+.info-item div > span {
   display: block;
   font-weight: 700;
   color: var(--heading);
